@@ -72,6 +72,17 @@ public class Gestorfestival {
 		festival.addActuacion("Linkin Park", 95);
 		
 		festival.mostrarInfo();
+		
+		
+		//Eliminar un grupo del festival
+		System.out.print("Introduce un grupo para eliminar");
+		String grupo = scan.nextLine();
+		
+		festival.eliminarActuacion(grupo);
+		actuaciones = festival.getActuacion();
+		
+		
+		
 }
 	
 }

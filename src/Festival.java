@@ -60,5 +60,44 @@ public void mostrarInfo(){
 }
 
 
+
+//Duracion 2
+private int getduracion() {
+	int duraciontotal = 0;
+	Iterator<Actuacion> i = this.Actuaciones.iterator();
+	
+	
+	return duraciontotal;
+	
+}
+
+
+
+
+//Eliminar un grupo
+public void eliminarActuacion(String grupo) {
+	Iterator<Actuacion> i = Actuaciones.iterator();
+	
+	while(i.hasNext()){
+		Actuacion a = i.next();
+		if (a.getNombregrupo().equals(grupo) ) {
+			i.remove();
+		}
+	}
+}
+
+
+//Modificar la duracion de una actuacion
+public void cambiarDuracionActuacion(String Nombregrupo, int Duracion) {
+	for(int i = 0; i < this.getActuacion().size(); i++){
+		if(this.Actuaciones.get(i).getNombregrupo().equals(Nombregrupo));
+		Actuacion a = this.Actuaciones.get(i);
+		a.setDuracion(Duracion);
+		this.Actuaciones.set(i, a);
+		
+	}
+	
+}
+
 }
 
